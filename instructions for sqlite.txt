@@ -1,0 +1,7 @@
+Download the sqlite amalgamation from http://www.sqlite.org/download.html.
+
+Include any reference to sqlite as extern "C", since sqlite is written in C.
+
+Create the sqlite library with "gcc -c sqlite3.c".
+
+Link your program to the newly created library with "g++ main.c sqlite3.o"
