@@ -3,36 +3,32 @@ Compilation Instructions:
 
 Compile and Run Just the c++ backend
 
-1. Compile the sqlite3
+Compile the sqlite3
+1. gcc -c sqlite3.c
 
-a. Run gcc -c sqlite3.c
-
-2. Compile the main program 
-
-a. Run g++ mtgcmain.cpp sqlite3.o -o test
+Compile the main program 
+2. g++ mtgcmain.cpp sqlite3.o -o test
 
 3. Run test
 
 
 
 Java Portion is Currently Malfunctioning
-1. Compile the sqlite3
+Compile the sqlite3
+1. gcc -c sqlite3.c
 
-a. Run gcc -c sqlite3.c
+Compile the mtgcmain into object file
+2. g++ -I "C:\Program Files\Java\jdk1.8.0_77\include" -I "C:\Program Files\Java\jdk1.8.0_77\include\win32" -c -o mtgcmain.o mtgcmain.cpp
 
-2. Compile the mtgcmain into object file
+Combine object files in shared object file
 
-a. g++ -I "C:\Program Files\Java\jdk1.8.0_77\include" -I "C:\Program Files\Java\jdk1.8.0_77\include\win32" -c -o mtgcmain.o mtgcmain.cpp
+3. g++ -shared -o whateveryouwanttonamethefile.so mtgcmain.o sqlite3.o
 
-3. Combine object files in shared object file
+Compile all java files in directory
 
-a. g++ -shared -o whateveryouwanttonamethefile.so mtgcmain.o sqlite3.o
+4. javac *.java
 
-4. Compile all java files in directory
+Run It
 
-a. javac *.java
-
-5. Run It
-
-a. java -classpath . Frame.test  
+5. java -classpath . Frame.test  
 
