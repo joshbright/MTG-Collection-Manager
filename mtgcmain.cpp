@@ -17,6 +17,12 @@ void removeCardFromDeck( int id, string deckName );
 
 int main()
 {
+    string fileName;
+    cout << "Ensure that your database is in the same location as the executable" << endl;
+    cout << "Input the name of the database you want to open or create: ";
+    cin >> fileName;
+    openDeck(fileName);
+    //All the other function are intended to be called upon by the java.
     return 0;
 }
 
@@ -33,6 +39,7 @@ void openDeck(string fileName)
      {
          attachDeck( fileName.c_str() );
          int connection = sqlite3_exec( db, stringCommand.c_str(), 0, (void*)data, &err );
+         cout << "Deck was created" << endl;
          detachDeck( fileName.c_str() );
      }
      
