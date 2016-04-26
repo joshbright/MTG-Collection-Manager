@@ -1,6 +1,19 @@
 # MTG Collection Manager
 Compilation Instructions:
 
+Compile and Run Just the c++ backend
+
+1. Compile the sqlite3
+a. Run gcc -c sqlite3.c
+
+2. Compile the main program 
+a. Run g++ mtgcmain.cpp sqlite3.o -o test
+
+3. Run test
+
+
+
+Java Portion is Currently Malfunctioning
 1. Compile the sqlite3
 a. Run gcc -c sqlite3.c
 
