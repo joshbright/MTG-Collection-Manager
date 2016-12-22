@@ -96,9 +96,6 @@ void addCardToDeck( int id, string deckName )
     
     detachDeck( deckName );
     
-    //TODO: Get the id of the card and add the card to the deck
-    //Use ATTACH if you have to
-    
 }
 
 void removeCardFromDeck( int id, string deckName )
