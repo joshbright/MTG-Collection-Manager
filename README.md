@@ -1,4 +1,21 @@
 # MTG Collection Manager
+
+As of this moment in time the java portion of this code as not been implemented properly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Compilation Instructions:
 
 Compile and Run Just the c++ backend
