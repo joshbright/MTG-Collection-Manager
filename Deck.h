@@ -2,7 +2,10 @@
 #define DECK_H
 
 #include <iterator>
+#include <iostream>
 #include <algorithm>
+#include <vector>
+#include "Card.h"
 using namespace std;
 
 class Deck
